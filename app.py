@@ -1,97 +1,143 @@
-# from flask import Flask
+from flask import Flask
 
 # app = Flask(__name__)
 
 # @app.route("/")
 # def home():
 #     return """
-# <!DOCTYPE html>
-# <html>
+#     <!DOCTYPE html>
+#     <html>
+#     <head>
+#         <title>Profile</title>
+#         <style>
+#             body {
+#                 margin: 0;
+#                 font-family: Arial;
+#                 background: #0f172a;
+#                 color: white;
+#             }
 
-# <head>
+#             .navbar {
+#                 display: flex;
+#                 justify-content: space-between;
+#                 align-items: center;
+#                 background: #1e293b;
+#                 padding: 15px 30px;
+#             }
 
-# <title>Web in python</title>
+#             .nav-links a {
+#                 color: white;
+#                 text-decoration: none;
+#                 margin: 0 15px;
+#             }
 
-# <!-- Bootstrap CSS -->
-# <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+#             .nav-links a:hover {
+#                 color: #38bdf8;
+#             }
 
-# </head>
+#             .container {
+#                 text-align: center;
+#                 padding: 40px;
+#             }
 
-# <body>
+#             h1 {
+#                 margin-bottom: 10px;
+#             }
 
-# <nav class="navbar navbar-expand-lg bg-body-tertiary">
-#   <div class="container-fluid">
-#     <a class="navbar-brand" href="#">Zero</a>
+#             /* Skills */
+#             .skills {
+#                 margin-top: 40px;
+#             }
 
-#     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-#       <span class="navbar-toggler-icon"></span>
-#     </button>
+#             .skill-box {
+#                 display: inline-block;
+#                 background: #1e293b;
+#                 padding: 10px 15px;
+#                 margin: 8px;
+#                 border-radius: 20px;
+#                 font-size: 14px;
+#                 transition: 0.3s;
+#             }
 
-#     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+#             .skill-box:hover {
+#                 background: #38bdf8;
+#                 color: black;
+#                 transform: scale(1.1);
+#             }
 
-#       <ul class="navbar-nav">
+#             /* Links */
+#             .places a {
+#                 display: block;
+#                 margin: 15px;
+#                 padding: 12px;
+#                 color: white;
+#                 text-decoration: none;
+#                 border-radius: 8px;
+#                 width: 220px;
+#                 margin-left: auto;
+#                 margin-right: auto;
+#                 transition: 0.3s;
+#             }
 
-#         <li class="nav-item">
-#           <a class="nav-link active" href="#">Home</a>
-#         </li>
+#             .linkedin { background-color: #0077b5; }
+#             .linkedin:hover { background-color: #005582; }
 
-#         <li class="nav-item">
-#           <a class="nav-link" href="#">Features</a>
-#         </li>
+#             .github { background-color: #171515; }
+#             .github:hover { background-color: #333; }
 
-#         <li class="nav-item">
-#           <a class="nav-link" href="#">Pricing</a>
-#         </li>
+#             .nextwave {
+#                 background-color: #38bdf8;
+#                 color: black;
+#             }
 
-#         <li class="nav-item dropdown">
-#           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-#             Menu
-#           </a>
+#             .nextwave:hover {
+#                 background-color: #0ea5e9;
+#             }
 
-#           <ul class="dropdown-menu">
-#             <li><a class="dropdown-item" href="#">Action</a></li>
-#             <li><a class="dropdown-item" href="#">Another action</a></li>
-#             <li><a class="dropdown-item" href="#">Something else</a></li>
-#           </ul>
+#         </style>
+#     </head>
 
-#         </li>
+#     <body>
 
-#       </ul>
+#         <div class="navbar">
+#             <div>⚡ Social Profiles</div>
+#             <div class="nav-links">
+#                 <a href="/">Home</a>
+#                 <a href="#skills">Skills</a>
+#             </div>
+#         </div>
 
-#     </div>
-#   </div>
-# </nav>
+#         <div class="container">
+#             <h1>🚀 Hruthik Gowda</h1>
+#             <p>Building AI Assistants & Automation Systems</p>
 
-# <style>
-# body {
-#     background-color: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtklyYv2lA96oCc4X41AsbM8ZKfh0neqY-FQ&s");
-#     background-size: cover;
-#     background-position: center;
-#     height: 100vh;
-#     color: black;
+#             <div class="skills" id="skills">
+#                 <h2>💡 Skills</h2>
 
-# }
-# h1{
-#     font-size: 20px;
-#     font-family: Arial, sans-serif;
-#     padding:20px;
-# }
-# </style>
+#                 <div class="skill-box">Python</div>
+#                 <div class="skill-box">Flask</div>
+#                 <div class="skill-box">Selenium</div>
+#                 <div class="skill-box">Automation</div>
+#                 <div class="skill-box">AI Integration</div>
+#                 <div class="skill-box">Speech Recognition</div>
+#                 <div class="skill-box">PyAutoGUI</div>
+#                 <div class="skill-box">Web Scraping</div>
+#                 <div class="skill-box">Chrome Automation</div>
+#             </div>
 
+#             <div class="places">
+#                 <a href="https://www.linkedin.com/in/hruthik-gowda-52a71030b/" class="linkedin">LinkedIn</a>
+#                 <a href="https://github.com/chandu0604-wq" class="github">GitHub</a>
+#                 <a href="https://learning.ccbp.in/course-library" class="nextwave">NextWave</a>
+#             </div>
 
-# <div class="container text-center mt-5">
-# <h1>Hello Chandu 🚀</h1>
-# <p>Your Python webpage with Bootstrap navbar</p>
-# <button class="btn btn-primary">Run Command</button>
-# </div>
+#         </div>
 
+#     </body>
+#     </html>
+#     """
 
-# # <!-- Bootstrap JS -->
-# # <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-# # </body>
-# # </html>
-# # """
-
-# # if __name__ == "__main__":
-# #     app.run(debug=True)
+# # 🚀 Run Server
+# if __name__ == "__main__":
+#     print("Starting Flask server...")
+#     app.run(debug=True)
